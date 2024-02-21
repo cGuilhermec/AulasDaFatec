@@ -1,1 +1,19 @@
-Todas as aulas da Fatec estão neste repositorio
+Todas as Aulas Estao em Branchs
+
+Para ir para a aula de Desenvolvimento web 2:
+git checkout webDevelop2
+
+para ir para a aula de Tecnicas de Programacao:
+git checkout tecnicasDeProgramacao
+
+Para ir para a aula de Banco Relaciona:
+git checkout bancoRelacional
+
+Para ir para a aula de Estrutura de Dados: (Vazio)
+git checkout estruturaDeDados
+
+Para ir para a aula de Matematica para Computacao: (Vazio)
+git checkout matComputador
+
+Para ir para a aula de Engenharia de Software 2: (Vazio)
+git checkout engSoft2 
