@@ -1,29 +1,5 @@
-# :barber: Segundo semestre! :barber:
+# :barber: Tecnicas De Programacao :barber:
 
-> **Comandos:** Comandos para navegar entre as **Branchs** para poder acessar as aulas.
+ :round_pushpin: Dentro desta branch, você encontrará todas as aulas referentes a Tecnicas De Programacao do segundo semestre. Navegue entre as pastas e divirta-se; procuramos manter este repositório o mais organizado possível!
 
-- Para ir para a aula de **Desenvolvimento web 2**: :construction:
-	```sh
-	git checkout webDevelop2
-	```
-- Para ir para a aula de **Tecnicas de Programacao**: :construction:
-	```sh
-	git checkout tecnicasDeProgramacao
-	```
-
-- Para ir para a aula de **Banco Relaciona**: :construction:
-	```sh
-	git checkout bancoRelacional
-	```
-- Para ir para a aula de **Estrutura de Dados**:  **(Vazio)** :warning:
-	```sh
-	git checkout estruturaDeDados
-	```
-- Para ir para a aula de Matematica para **Computacao**: **(Vazio)** :warning:
-	```sh
-	git checkout matComputador
-	```
-- Para ir para a aula de **Engenharia de Software 2**: **(Vazio)**:warning:
-	```sh
-	git checkout engSoft2
-	```
+ Bons estudos :blush:
