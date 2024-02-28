@@ -1,17 +1,22 @@
 import express, { Request, Response } from "express";
+import dotenv from 'dotenv';
+import router from "./routes";
+
+dotenv.config();
 
 const app = express();
-const PORT = 3001;
+app.use(express.json());
 
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(process.env.PORT , () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
 });
 
-app.get("/", (req: Request, res: Response) => {
-    res.send('Ola turminha da bagunca');
-})
+app.use(router);
 
-app.get('/user', (req: Request, res: Response) => {
-    res.send('Henrique SPP');
-})
+// app.get('/texto/:nome/:indice', (req: Request, res: Response) => {
+//     const { nome, indice } = req.params;
+//     let num: number = parseInt(indice);
+
+//     res.json(`letra: ${nome.slice( 0 , num )}`);
+// });
