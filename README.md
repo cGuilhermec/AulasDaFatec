@@ -21,7 +21,7 @@
 	```
 - Para ir para a aula de Matematica para **Computacao**: **(Vazio)** :warning:
 	```sh
-	git checkout matComputador
+	git checkout matComputacao
 	```
 - Para ir para a aula de **Engenharia de Software 2**: **(Vazio)**:warning:
 	```sh
