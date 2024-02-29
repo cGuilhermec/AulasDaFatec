@@ -15,7 +15,7 @@
 	```sh
 	git checkout bancoRelacional
 	```
-- Para ir para a aula de **Estrutura de Dados**:  **(Vazio)** :warning:
+- Para ir para a aula de **Estrutura de Dados**: :construction:
 	```sh
 	git checkout estruturaDeDados
 	```
