@@ -1,19 +1,36 @@
-Todas as Aulas Estao em Branchs
+Listar bancos de dados:
 
-Para ir para a aula de Desenvolvimento web 2:
-git checkout webDevelop2
+\l
+Conectar a um banco de dados:
 
-para ir para a aula de Tecnicas de Programacao:
-git checkout tecnicasDeProgramacao
+\c nome_do_banco_de_dados
+Listar tabelas em um banco de dados:
 
-Para ir para a aula de Banco Relaciona:
-git checkout bancoRelacional
+\dt
+Exibir detalhes sobre uma tabela específica:
 
-Para ir para a aula de Estrutura de Dados: (Vazio)
-git checkout estruturaDeDados
+\d+ nome_da_tabela
+Listar esquemas:
 
-Para ir para a aula de Matematica para Computacao: (Vazio)
-git checkout matComputador
+\dn
+Exibir informações sobre um esquema específico:
 
-Para ir para a aula de Engenharia de Software 2: (Vazio)
-git checkout engSoft2 
+\dn+
+Exibir colunas de uma tabela:
+
+\d nome_da_tabela
+Exibir índices de uma tabela:
+
+\di nome_da_tabela
+Exibir funções armazenadas (stored procedures):
+
+\df
+Exibir usuários e suas permissões:
+
+\du
+Exibir informações sobre uma função específica:
+
+\df+ nome_da_funcao
+Sair do sql:
+
+\q
