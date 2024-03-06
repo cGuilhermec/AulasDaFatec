@@ -1,0 +1,36 @@
+--Criamos o db da aula 03;
+create database bd_aula03;
+
+--Vamos criar as tabelas do banco;
+create table tbl_cliente(
+    codigo_cliente integer primary key,
+    cpf integer unique
+);
+create table tbl_emprestimo(
+    numero_emprestimo integer primary key,
+    codigo_cliente,
+    codigo_livro
+);
+create table tbl_titulo(
+    codigo_titulo integer primary key,
+    titulo text not null,
+    descricao text,
+    categoria text
+);
+create table tbl_livros(
+    cod_livro integer primary key,
+    codigo_titulo,
+    status text
+);
+
+--Vamos adicionar os domains;
+create domain chk_status text check (value in ('disponivel', 'alugado'));
+create domain chk_categoria text check (value in ('drama', 'comedia'));
+--Adicionando os Domains as colunas das tabelas;
+alter table add categoria chk_categoria;
+alter table tbl_livros alter column status type chk_status; 
+
+--Vamos referenciar as forign kes as tabelas;
+alter table tbl_livros add constraint codigo_livro foreign key (codigo_titulo) references tbl_titulo(codigo_titulo);
+alter table tbl_emprestimo add constraint codigo_livro foreign key (codigo_livro) references tbl_livros(cod_livro);
+alter table tbl_emprestimo add constraint codigo_cliente foreign key (codigo_cliente) references tbl_cliente(comedia);

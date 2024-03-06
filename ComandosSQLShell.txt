@@ -1,3 +1,4 @@
+/q
 Listar bancos de dados:
 
 \l

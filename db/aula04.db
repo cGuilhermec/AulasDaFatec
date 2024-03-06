@@ -1,0 +1,2 @@
+--Nessa aula vamos adicionar os valores dentro das tableas
+insert into tbl_cliente(codigo_cliente, nome, cidade, endereco) values(1, 'João Silva', 'São Paulo', 'Rua A, 123');
