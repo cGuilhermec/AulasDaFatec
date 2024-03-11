@@ -1,2 +1,24 @@
 --Nessa aula vamos adicionar os valores dentro das tableas
-insert into tbl_cliente(codigo_cliente, nome, cidade, endereco) values(1, 'João Silva', 'São Paulo', 'Rua A, 123');
+insert into tbl_cliente(codigo_cliente, nome, cidade, endereco) 
+    values
+    (1, 'João Silva', 'São Paulo', 'Rua A, 123'),
+    (2, 'Maria Santos', 'Rio de Janeiro', 'Av. B, 456'),
+    (3, 'Pedro Almeida', 'Belo Horizonte', 'Rua C, 789'),
+    (4, 'Ana Oliveira', 'Salvador', 'Av. D, 1011'),
+    (5, 'Carlos Lima', 'Brasilia', 'Rua E, 1213');
+
+insert into tbl_titulo(codigo_titulo, titulo, descricao, categoria)
+    values
+    (1, 'Aventuras Urbanas', 'Uma historia emocionante', 'DRAMA'),
+    (2, 'Misterios Antigos', 'Enigmas por resolver', 'COMEDIA'),
+    (3, 'Amor nas Estrelas', 'Um romance intergalactico', 'DRAMA'),
+    (4, 'Codigo Enigmatico', 'Segredos ocultos', 'COMEDIA'),
+    (5, 'Historias Perdidas', 'Contos esquecidos', 'DRAMA'),
+
+--Erro ao inserir esses dados, falar com o professor.
+insert into tbl_livros(cod_livro, status ,codigo_titulo) values(1, 'disponivel', 1), (2, 'alugado', 1), (3, 'disponivel', 2), (4, 'alugado', 3), (5, 'disponivel', 4);
+
+--Provavelmente vou precisar adicionar tudo da tabela tbl_livros, para depois adicionar esses caras aqui!
+insert into tbl_emprestimo(numero_emprestimo, codigo_cliente, codigo_livro) values(1, 1, 2), (2, 2, 4), (3, 3, 1), (4, 4, 5), (5, 5, 3);
+
+
