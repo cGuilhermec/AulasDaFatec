@@ -35,3 +35,6 @@ Exibir informações sobre uma função específica:
 Sair do sql:
 
 \q
+
+\dD 
+Para ver os domains do banco

@@ -16,9 +16,19 @@ insert into tbl_titulo(codigo_titulo, titulo, descricao, categoria)
     (5, 'Historias Perdidas', 'Contos esquecidos', 'DRAMA'),
 
 --Erro ao inserir esses dados, falar com o professor.
-insert into tbl_livros(cod_livro, status ,codigo_titulo) values(1, 'disponivel', 1), (2, 'alugado', 1), (3, 'disponivel', 2), (4, 'alugado', 3), (5, 'disponivel', 4);
+insert into tbl_livros(cod_livro, status ,codigo_titulo) 
+    values
+    (1, 'disponivel', 1), 
+    (2, 'ocupado', 1), 
+    (3, 'disponivel', 2), 
+    (4, 'ocupado', 3), 
+    (5, 'disponivel', 4);
 
 --Provavelmente vou precisar adicionar tudo da tabela tbl_livros, para depois adicionar esses caras aqui!
-insert into tbl_emprestimo(numero_emprestimo, codigo_cliente, codigo_livro) values(1, 1, 2), (2, 2, 4), (3, 3, 1), (4, 4, 5), (5, 5, 3);
-
-
+insert into tbl_emprestimo(numero_emprestimo, codigo_cliente, codigo_livro) 
+    values
+    (1, 1, 2), 
+    (2, 2, 4), 
+    (3, 3, 1), 
+    (4, 4, 5), 
+    (5, 5, 3);

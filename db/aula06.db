@@ -1,0 +1,62 @@
+--1 Liste os títulos e seus status, incluindo os que não têm status definido. (retorna 6 linhas)
+
+	select * from tbl_titulo;
+	select * from tbl_cliente;
+	select * from tbl_livros;
+	select * from tbl_emprestimo;
+	
+	select t.titulo, l.status
+	from tbl_titulo t
+		inner join tbl_livros l on t.codigo_titulo = l.codigo_titulo;
+
+--2 Liste os títulos e suas descrições dos livros alugados (retorna 4 linhas)
+
+	select t.titulo, t.descricao
+	from tbl_titulo t
+		inner join tbl_livros l on t.codigo_titulo = l.codigo_titulo
+		where l.status = 'ocupado';
+
+
+--3 Liste os nomes dos clientes que não têm livros alugados (retorna 1 linha)
+
+	select c.nome
+	from tbl_cliente c
+		inner join tbl_livros l on c.codigo_cliente = l.cod_livro
+		inner join tbl_emprestimo e on e.codigo_livro = l.cod_livro
+		where l.status = 'ocupado';
+
+--4 Liste os títulos e suas categorias dos livros disponiveis (retorna 1 linha).
+
+	select t.titulo, t.categoria
+	from tbl_titulo t
+		inner join tbl_livros l on l.cod_livro = t.codigo_titulo
+		where l.status = 'disponivel';
+
+
+--5 Liste os nomes dos clientes e os títulos dos livros que eles têm alugados (retorna 5 linhas).
+
+	select * from tbl_titulo;
+	select * from tbl_cliente;
+	select * from tbl_livros;
+	select * from tbl_emprestimo;
+
+	select c.nome, t.titulo
+	from tbl_cliente c
+		inner join tbl_titulo t on t.codigo_titulo = c.codigo_cliente
+		inner join tbl_emprestimo e on e.codigo_cliente = c.codigo_cliente;
+
+
+--6 Retorne o nome, titulo do livro e o status do esmprestimo do livro alugado pela Ana Oliveira (retorna 1 linha)
+
+	select cl.nome, t.titulo, l.status
+	from tbl_titulo t
+		inner join tbl_livros l on t.codigo_titulo = l.codigo_titulo
+		inner join tbl_emprestimo e on e.codigo_livro = l.cod_livro
+		inner join tbl_cliente cl on cl.codigo_cliente = e.codigo_cliente
+		where cl.nome = 'Ana Oliveira';
+
+
+
+
+
+

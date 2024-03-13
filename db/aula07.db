@@ -1,0 +1,50 @@
+--1 Listar o nome dos fornecedores(maiusculo) e das peças(minusculo) que se situam na mesma cidade, ordenado pelo nome
+
+	
+	select upper(f.nome), lower(pe.nome)
+	from tbl_fornecedor f
+		inner join tbl_peca pe on pe.cidade = f.cidade;
+	
+	
+--2 listar as cidades onde existem fornecedores (sem valores duplicados)
+
+	select DISTINCT f.cidade 
+	from tbl_fornecedor f;
+	
+
+
+--3 Listar o nome e a cor das peças do fornecedor com código 3, ordenado pelo nome da peça
+
+	select p.nome, p.cor 
+	from tbl_peca p
+		inner join tbl_estoque e on e.cod_peca = p.cod_peca
+		inner join tbl_fornecedor f on f.cod_fornecedor = e.cod_fornecedor
+		where f.cod_fornecedor = 3
+		order by p.nome;
+
+--4 Listar o nome e a cidade dos fornecedores com mais de 10 peças.Contar só as peças de código 1.
+
+--Nao consegui
+
+	select f.nome, f.cidade
+	from tbl_fornecedor f
+		inner join tbl_estoque e on e.cod_fornecedor = f.cod_fornecedor
+		inner join tbl_peca p on p.cod_peca = e.cod_peca
+		
+		
+--5 Listar a quantidade total de peças com código 1, fornecidas pelos fornecedores.
+
+
+--6 Listar a média dos preços das peças fornecidas pelo fornecedor com código 3.
+
+
+--7 lista o valor da pecas mais cara e a mais barata.
+
+
+--8 listar a quantidade de peças cadastradas
+
+
+--9 listar a quantidade de cidades diferentes onde existem peças cadastradas
+
+
+--10 listar a media dos precos de todas as peças, com somente 1 digito após a virgula.

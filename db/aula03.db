@@ -26,6 +26,7 @@ create table tbl_livros(
 --Vamos adicionar os domains;
 create domain chk_status text check (value in ('disponivel', 'alugado'));
 create domain chk_categoria text check (value in ('drama', 'comedia'));
+
 --Adicionando os Domains as colunas das tabelas;
 alter table add categoria chk_categoria;
 alter table tbl_livros alter column status type chk_status; 
