@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ex01": "ts-node ex01.ts"
+    "ex01": "ts-node ex01.ts",
+    "class": "ts-node class_models_usage.ts"
   },
   "keywords": [],
   "author": "",
