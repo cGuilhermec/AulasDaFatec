@@ -30,21 +30,40 @@
 	from tbl_fornecedor f
 		inner join tbl_estoque e on e.cod_fornecedor = f.cod_fornecedor
 		inner join tbl_peca p on p.cod_peca = e.cod_peca
+		where e.quantidade > 10 and p.cod_peca = 1;
 		
 		
 --5 Listar a quantidade total de peças com código 1, fornecidas pelos fornecedores.
-
+	
+	select sum(e.quantidade)
+	from tbl_estoque e
+		inner join tbl_peca p on p.cod_peca = e.cod_peca
+		where p.cod_peca = 1;
 
 --6 Listar a média dos preços das peças fornecidas pelo fornecedor com código 3.
-
+	
+	select avg(p.preco)
+	from tbl_peca p
+		inner join tbl_estoque e on e.cod_peca = p.cod_peca
+		inner join tbl_fornecedor f on f.cod_fornecedor = e.cod_fornecedor
+		where f.cod_fornecedor = 3;
 
 --7 lista o valor da pecas mais cara e a mais barata.
 
+	select max(p.preco), min(p.preco)
+	from tbl_peca p;
 
 --8 listar a quantidade de peças cadastradas
 
+	select count(e.quantidade)
+	from tbl_estoque e;
 
 --9 listar a quantidade de cidades diferentes onde existem peças cadastradas
 
+	select count( distinct p.cidade) "Quantidade de cidades"
+	from tbl_peca p;
 
 --10 listar a media dos precos de todas as peças, com somente 1 digito após a virgula.
+
+	select round(avg(p.preco),1) "Media dos precos"
+	from tbl_peca p;
