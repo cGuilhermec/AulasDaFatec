@@ -5,6 +5,14 @@ export type Ponto = {
 
 };
 
+export type Poligono = {
+
+    nome: string;
+    editavel: boolean;
+    pontos: Ponto[];
+
+};
+
 export interface Retangulo {
 
     infEsquerdo: Ponto;
@@ -12,6 +20,7 @@ export interface Retangulo {
 
 };
     
+
 export abstract class Livro {
     
     constructor(protected titulo:string, protected ano:number){
@@ -76,3 +85,5 @@ export default interface Geometria {
     area():number;
     perimetro():number;
 };
+
+
